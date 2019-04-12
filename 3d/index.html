@@ -1,0 +1,324 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8"/>
+  </head>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="three.min.js"></script>
+        <script src="OrbitControls.js"></script>
+        <script src="Chart.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"
+          integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+
+
+  <body>
+    <div class="card bg-dark text-white">
+      <div id="space">            
+      </div>
+      <div class="card-img-overlay">
+        <div class="float-left">
+          <h5 class="card-title">Nearest planet: <span id="nearest_planet"></span></h5>
+        </div>
+        <div class="float-right">
+          <button id="myPhoto" class="btn" active="false"> My Photo</button>  
+        </div>
+        <video id="player" class="invisible" controls autoplay></video>
+        <div class="fixed-bottom col-sm-4">
+          <button type="button" class="btn btn-primary col-sm-12 controls" dir="ahead" id="ahead">Ahead</button>
+          <div class="btn-group col-sm-12" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary controls" dir="left" id="left">Left</button>
+            <button type="button" class="btn btn-secondary controls" dir="back" id="back">Back</button>
+            <button type="button" class="btn btn-secondary controls" dir="right" id="right">Right</button>
+          </div>
+        </div>
+      </div>
+    </div>        
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-transparent">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal_title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul class="nav mb-1">
+              <li class="nav-item d-none rounded data_changer" target="surface_temp">
+                <a class="nav-link active" href="#">Temperature</a>
+              </li>
+              <li class="nav-item d-none rounded data_changer" target="composition" >
+                <a class="nav-link" href="#">Composition</a>
+              </li>
+              <li class="nav-item d-none rounded data_changer" target="r">
+                <a class="nav-link" href="#">Radio</a>
+              </li>
+              <li class="nav-item d-none rounded data_changer" target="pe">
+                <a class="nav-link" href="#">Perihelion</a>
+              </li>
+              <li class="nav-item d-none rounded data_changer" target="ap">
+                <a class="nav-link" href="#">Aphelion</a>
+              </li>
+              <li class="nav-item d-none">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+              <li class="nav-item">
+                <button type="button" class="btn btn-primary compare_it">Comparation view</button>
+              </li>
+            </ul>
+            <div id="one_planet_chart" class="col-sm-12">
+              <div class="float-left d-none" id="div_1">
+                <div class="col-sm-3" id="chart_1">
+                  <canvas id="canvas_chart_1"></canvas>
+                </div>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-primary add" target="#chart_1">
+                    Add to compare
+                  </button>
+                  <button type="button" class="btn btn-primary zoom" target="#chart_1">
+                    Zoom+
+                  </button>
+                  <button type="button" class="btn btn-primary unzoom" target="#chart_1">   
+                    Zoom-
+                  </button>
+                  <button type="button" class="btn btn-primary remove" target="#chart_1">
+                    Remove
+                  </button>
+                </div>
+              </div>
+              <div class="float-left d-none" id="div_2">
+                <div class="col-sm-3" id="chart_2">
+                  <canvas id="canvas_chart_2"></canvas>
+                </div>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-primary add" target="#chart_2">  Add to compare
+                  </button>
+                  <button type="button" class="btn btn-primary zoom" target="#chart_2">
+                    Zoom+
+                  </button>
+                  <button type="button" class="btn btn-primary unzoom" target="#chart_2">
+                    Zoom-
+                  </button>
+                  <button type="button" class="btn btn-primary remove" target="#chart_2">
+                    Remove
+                  </button>
+                </div>
+              </div>
+              <div class="float-left d-none" id="div_3">
+                <div class="col-sm-3" id="chart_3">
+                  <canvas id="canvas_chart_3"></canvas>
+                </div>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-primary add" target="#chart_3">  Add to compare
+                  </button>
+                  <button type="button" class="btn btn-primary zoom" target="#chart_3">
+                    Zoom+
+                  </button>
+                  <button type="button" class="btn btn-primary unzoom" target="#chart_3">
+                    Zoom-
+                  </button>
+                  <button type="button" class="btn btn-primary remove" target="#chart_3">
+                    Remove
+                  </button>
+                </div>
+              </div>
+              <div class="float-left d-none" id="div_4">
+                <div class="col-sm-3 " id="chart_4">
+                  <canvas id="canvas_chart_4"></canvas>
+                </div>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-primary add" target="#chart_4">  Add to compare
+                  </button>
+                  <button type="button" class="btn btn-primary zoom" target="#chart_4">
+                    Zoom+
+                  </button>
+                  <button type="button" class="btn btn-primary unzoom" target="#chart_4">
+                    Zoom-
+                  </button>
+                  <button type="button" class="btn btn-primary remove" target="#chart_4">
+                    Remove
+                  </button>
+                </div>
+              </div>
+              <div class="float-left d-none" id="div_5">
+                <div class="col-sm-3 " id="chart_5">
+                  <canvas id="canvas_chart_5"></canvas>
+                </div>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-primary add" target="#chart_5">  Add to compare
+                  </button>
+                  <button type="button" class="btn btn-primary zoom" target="#chart_5">
+                    Zoom+
+                  </button>
+                  <button type="button" class="btn btn-primary unzoom" target="#chart_5">
+                    Zoom-
+                  </button>
+                  <button type="button" class="btn btn-primary remove" target="#chart_5">
+                    Remove
+                  </button>
+                </div>
+              </div>
+              <div class="float-left d-none" id="div_6">
+                <div class="col-sm-3" id="chart_6">
+                  <canvas id="canvas_chart_6"></canvas>
+                </div>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-primary add" target="#chart_6">  Add to compare
+                  </button>
+                  <button type="button" class="btn btn-primary zoom" target="#chart_6">
+                    Zoom+
+                  </button>
+                  <button type="button" class="btn btn-primary unzoom" target="#chart_6">
+                    Zoom-
+                  </button>
+                  <button type="button" class="btn btn-primary remove" target="#chart_6">
+                    Remove
+                  </button>
+                </div>
+              </div>
+              <div class="float-left d-none" id="div_7">
+                <div class="col-sm-3" id="chart_7">
+                  <canvas id="canvas_chart_7"></canvas>
+                </div>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-primary add" target="#chart_7">
+                    Add to compare
+                  </button>
+                  <button type="button" class="btn btn-primary zoom" target="#chart_7">
+                    Zoom+
+                  </button>
+                  <button type="button" class="btn btn-primary unzoom" target="#chart_7">
+                    Zoom-
+                  </button>
+                  <button type="button" class="btn btn-primary remove" target="#chart_7">
+                    Remove
+                  </button>
+                </div>
+              </div>
+              <div class="float-left d-none" id="div_8">
+                <div class="col-sm-3" id="chart_8">
+                  <canvas id="canvas_chart_8"></canvas>
+                </div>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-primary add" target="#chart_8">  Add to compare
+                  </button>
+                  <button type="button" class="btn btn-primary zoom" target="#chart_8">
+                    Zoom+
+                  </button>
+                  <button type="button" class="btn btn-primary unzoom" target="#chart_8">
+                    Zoom-
+                  </button>
+                  <button type="button" class="btn btn-primary remove" target="#chart_8">
+                    Remove
+                  </button>
+                </div>
+              </div>    
+            </div>
+            <div class="float-left d-none" id="div_compare">
+              <div id="comparation" class="col-sm-12">
+                <div>
+                  <ul class="nav mb-1">
+                    <li class="nav-item mb-1 compare_link rounded" target="0">
+                      <a class="nav-link active" href="#">
+                        Mercury
+                      </a>
+                    </li>
+                    <li class="nav-item mb-1 compare_link rounded" target="1" >
+                      <a class="nav-link" href="#">
+                        Venus
+                      </a>
+                    </li>
+                    <li class="nav-item mb-1 compare_link rounded" target="2">
+                      <a class="nav-link" href="#">
+                        Earth
+                      </a>
+                    </li>
+                    <li class="nav-item mb-1 compare_link rounded" target="3">
+                      <a class="nav-link" href="#">
+                        Mars
+                      </a>
+                    </li>
+                    <li class="nav-item mb-1 compare_link rounded" target="4">
+                      <a class="nav-link" href="#">
+                        Jupiter
+                      </a>
+                    </li>
+                    <li class="nav-item mb-1 compare_link rounded" target="5">
+                      <a class="nav-link" href="#">
+                        Saturn
+                      </a>
+                    </li>
+                    <li class="nav-item mb-1 compare_link rounded" target="6">
+                      <a class="nav-link" href="#">
+                        Neptune
+                      </a>
+                    </li>
+                    <li class="nav-item mb-1 compare_link rounded" target="7">
+                      <a class="nav-link" href="#">
+                        Uranus
+                      </a>
+                    </li>
+                    <li class="nav-item compare_link rounded" target="all">
+                      <a class="nav-link" href="#">
+                        All
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-12 ">
+                  <div  id="chart_compare">
+                    <canvas id="canvas_chart_compare"></canvas>
+                  </div>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary add" target="#chart_compare">
+                      Add to compare
+                    </button>
+                    <button type="button" 
+                      class="btn btn-primary zoom" 
+                      target="#chart_compare">
+                        Zoom+
+                    </button>
+                    <button type="button" 
+                      class="btn btn-primary unzoom" 
+                      target="#chart_compare">    
+                        Zoom-
+                    </button>
+                    <button type="button" class="btn btn-primary reset_data" target="#chart_compare">
+                        Reset
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close_it">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+</script>
+  <style type="text/css">
+    html, body 
+    {
+      background-color: #000;
+      margin: 0px;
+      padding: 0px;
+      overflow: hidden;
+    }
+    #space
+    {
+      height: 100%;
+      padding: 0;
+      margin:0;
+    }
+  </style>
+</html>

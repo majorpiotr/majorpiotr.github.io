@@ -1,0 +1,513 @@
+/*
+-------------------- CSS for basic HTML elements-------- 
+*/
+
+body{
+	/*padding-top: 100px;*/
+    overflow-x: hidden;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../img/jumbotron.jpg');
+}
+a:hover
+{
+	text-decoration: none;
+}
+html 
+{
+  scroll-behavior: smooth;
+}
+.my_accordion{
+/*bg-blue_sapphire  border-platinum text-gunmetal_gray*/
+  background-color: #2C3531;
+  border:2px solid #D9B08C;
+  color: #116466;
+}
+
+/*
+---------------------Modal---------------------
+*/
+.modal-dialog {
+  min-width: 100%;
+    margin: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+}
+
+/*
+---------------------Colors from 2010s---------------------
+
+*/
+/* blue_sapphire #2C3531 */
+.bg-blue_sapphire
+{
+  background-color: #2C3531;
+}
+.text-blue_sapphire
+{
+  color: #2C3531;
+}
+.border-blue_sapphire
+{
+  border:2px solid #2C3531;
+}
+/* gunmetal_gray #116466 */
+.bg-gunmetal_gray
+{
+  background-color: #116466;
+}
+.text-gunmetal_gray
+{
+  color: #116466;
+}
+.border-gunmetal_gray
+{
+  border:2px solid #116466;
+}
+/* platinum #D9B08C */
+.bg-platinum
+{
+  background-color: #D9B08C;
+}
+.text-platinum
+{
+  color: #D9B08C;
+}
+.border-platinum
+{
+  /*border-color: #882D17;*/
+  border:2px solid #D9B08C;
+}
+/* peach-orange #FFCB9A */
+.bg-peach-orange
+{
+  background-color: #FFCB9A;
+}
+.text-peach-orange
+{
+  color: #FFCB9A;
+}
+.border-peach-orange
+{
+  /*border-color: #882D17;*/
+  border:2px solid #FFCB9A;
+}
+/* tan #D1E8E2 */
+.bg-tan
+{
+  background-color: #D1E8E2;
+}
+.text-tan
+{
+  color: #D1E8E2;
+}
+.border-tan
+{
+  /*border-color: #882D17;*/
+  border:2px solid #D1E8E2;
+}
+ 
+/*
+Easy read- it changes colors to black and white when hover in order to make text easier to read
+*/
+.easy_read:hover
+{
+  color:black;
+  background-color: white;
+}
+/*
+---------------------Navbar classes---------------------
+ Navbar is MENU on TOP of screen.
+ Classes below are used for Navbar. 
+*/
+@keyframes slidein {
+  from {
+  /*
+  It moves element from RIGHT to LEFT
+  Applies to Navbar
+  */
+  left: 100%;
+   opacity: 0;
+  }
+
+  to {
+  left: 0%;
+  opacity: 1;
+  }
+}
+
+.searchbar{
+	/*
+  It runs animaton slidein for Navbar.
+  */
+  opacity:0.3;
+	animation-duration: 2s;
+  animation-name: slidein;
+} 
+@media(min-width: 1000px)
+{
+.searchbar{
+  /*
+  It runs animaton slidein for Navbar.
+  */
+  opacity:0.7;
+  animation-duration: 2s;
+  animation-name: slidein;
+} 
+}
+.searchbar:hover{
+  /*
+  It shows Navbar after hover
+  */
+	opacity:1;
+} 
+/*----------------- end of navbar classes-----------------*/
+.card{
+  /*
+  Borders in Bootstrap Cards are not used in this project, therefore are set to 0 here.
+  */
+	border:0px;
+}
+.img_link
+{
+  /*
+  It applies for images used in links for Wikipedia and Social Media
+  */
+	width: 100px;
+	height: 100px;
+	text-align: center;
+}
+
+
+
+/* class zoomable - it allows us to zoom element. It applies to every "zoomable" element on page, so we avoid class repetation */
+/* i figured out that sometimes zoomable does not looks good on small screens. Moreover,
+ witht all likelihood they do not have mouse so hover does not work.*/
+@media(min-width: 1000px)
+{
+  .zoomable
+  {
+    transform: scale(1) ;
+    z-index: +1;
+    transition-duration: 3s, 1s;
+    transition-property: transform;
+  }
+  .zoomable:hover
+  {
+    transform: scale(1.1) ;
+    z-index: +1;
+    transition-duration: 3s, 1s;
+    transition-property: transform;
+  }
+
+/* zoomable-150 - make element even bigger*/
+
+  .zoomable-125:hover
+  {
+    transform: scale(1.25) ;
+    z-index: +1;
+    transition-duration: 3s, 1s;  
+    transition-property: transform;
+  }
+  .zoomable-125
+  {
+    transform: scale(1) ;
+    z-index: +1;
+    transition-duration: 3s, 1s;
+    transition-property: transform;
+  }
+/* zoomable-150 - make element even bigger*/
+  .zoomable-150:hover
+  {
+    transform: scale(1.5) ;
+    z-index: +1;
+    transition-duration: 3s, 1s;
+    transition-property: transform;
+  }
+/* zoomable-200 makes element 2 times bigger*/
+  .zoomable-200:hover
+  {
+    transform: scale(2) ;
+    z-index: +1;
+    transition-duration: 3s, 1s;
+    transition-property: transform;
+  }
+  .small_0_9
+  {
+    transform: scale(0.9) ;
+    z-index: +1;
+    transition-duration: 3s, 1s;
+    transition-property: transform;
+  }
+}
+.smallable_3d_most_left
+{
+ -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateY(80deg) scale(0.9); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateY(80deg);
+}
+.smallable_3d_left
+{
+ -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateY(45deg) scale(0.9); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateY(45deg);
+}
+.smallable_3d_most_right
+{
+ -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateY(290deg) scale(0.9); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateY(290deg);
+}
+.smallable_3d_right
+{
+ -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateY(335deg) scale(0.9); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateY(335deg);
+}
+.smallable
+{
+ -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateY(335deg) scale(0.9); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateY(335deg);
+}
+
+
+/* some pushing stuff
+*/
+
+
+/* some opacity class*/
+.show_animation
+{
+  opacity : 0 ; 
+}
+.opacity-0
+{
+  /*
+
+  Fully invissible
+  It is the same as .invissible from Bootstrap 
+  */
+  opacity : 0 ;
+}
+.opacity-25
+{
+  /*
+  almost invissible
+  */
+  opacity : 0.25 ;
+}
+.opacity-50
+{
+  /*
+  half vissible
+  */
+  opacity : 0.50 ; 
+}
+.opacity-75
+{
+  /*
+  Almost vissible
+  */
+  opacity : 0.75 ;  
+}
+.opacity-100
+{
+  /*
+  Fully vissible
+  It is the same as .vissible from Bootstrap
+  */
+  opacity : 100 ;
+}
+.rotated-10
+{
+      -webkit-transform: rotateZ(10deg); /* Safari */
+      transform: rotateZ(10deg); /* Standard syntax */
+}
+.rotated-45
+{
+      -webkit-transform: rotateY(45deg); /* Safari */
+      transform: rotateY(45deg); /* Standard syntax */
+}
+.lay_down
+{
+      -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateX(80deg); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateX(80deg);
+}
+.perspective-100
+{
+
+    -webkit-perspective: 1000px; /* Safari 4-8  */
+    perspective: 1000px;
+}
+.perspective-10
+{
+
+    -webkit-perspective: 100px; /* Safari 4-8  */
+    perspective: 100px;
+}
+
+.rotated-135
+{
+      -webkit-transform: rotateY(135deg); /* Safari */
+      transform: rotateY(135deg); /* Standard syntax */
+}
+.rotated-170
+{
+      -webkit-transform: rotateZ(170deg); /* Safari */
+      transform: rotateZ(170deg); /* Standard syntax */
+}
+.rotated-270
+{
+      -webkit-transform: rotateY(270deg); /* Safari */
+      transform: rotateY(270deg); /* Standard syntax */
+}
+.rotated-350
+{
+      -webkit-transform: rotateZ(350deg); /* Safari */
+      transform: rotateZ(350deg); /* Standard syntax */
+}
+.rotated-90
+{
+      -webkit-transform: rotateY(90deg); /* Safari */
+      transform: rotateY(90deg); /* Standard syntax */
+      -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+      transform-style: preserve-3d;
+    
+}
+/*
+experimental
+*/
+ @keyframes ani_rotated-90
+{
+    0% {
+      -webkit-transform: rotateY(0deg); /* Safari */
+      transform: rotateY(0deg); /* Standard syntax */
+      -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+      transform-style: preserve-3d;
+      /*transform: scale(0);*/
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: rotateY(90deg); /* Safari */
+      transform: rotateY(90deg); /* Standard syntax */
+      -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+      transform-style: preserve-3d;
+      /*transform: scale(1);*/
+    }
+}
+
+.rotated-100
+{
+      -webkit-transform: rotateY(100deg); /* Safari */
+      transform: rotateY(100deg); /* Standard syntax */
+}
+@keyframes  opacity-anime{
+    0% {
+      opacity: 0;
+      /*transform: scale(0);*/
+    }
+    100% {
+      opacity: 1;
+      /*transform: scale(1);*/
+    }
+}
+.opacity-animated
+{
+  animation-name: opacity-anime;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+}
+/* class short - to cut photos */
+.short-300
+{
+  max-height: 300px;
+}
+
+@keyframes  apear_from_nowhere{
+/*
+It is animation that set elements on screen during scrolling
+It is used in script.js in $(window).scroll(function(){
+ $(window).scroll( in. /js/script.js
+*/
+    from {
+      opacity: 0;
+      transform: scale(0.1);
+      -webkit-transform: rotateY(90deg); /* Safari */
+      transform: rotateY(90deg); /* Standard syntax */
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+      
+    }
+}
+
+@keyframes  wake_up{
+/*
+It is animation that set elements on screen during scrolling
+It is used in script.js in $(window).scroll(function(){
+ $(window).scroll( in. /js/script.js
+*/
+    from {
+          -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+          -webkit-transform: rotateX(80deg) scale(0.5);  /* Safari 3-8  */
+          transform-style: preserve-3d;
+          transform: rotateX(80deg) scale(0.5); 
+          opacity: 0.3;
+
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+}
+@keyframes  backgound-move
+{
+    /*
+    Animation moves background from LEFT to RIGHT and then again to START point on LEFT side
+    It aplies to every section 
+    */
+    0% {
+      background-position: 0%;
+    }
+    50% {
+      
+      background-position: 100%;
+    }
+    100%{
+      background-position: 0%;   
+    }
+}
+
+section 
+{
+    /* 
+    Creates the parallax scrolling effect 
+    */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*
+    It runs animation backgound-move so background moves from LEFT to RIGHT and BACK 
+    */
+    animation-name: backgound-move;
+    animation-duration: 120s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
