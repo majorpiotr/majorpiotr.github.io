@@ -3,13 +3,112 @@
 */
 body{
 	padding-top: 100px;
+  overflow-x: hidden;
 }
 a:hover
 {
 	text-decoration: none;
 }
-html {
+html 
+{
   scroll-behavior: smooth;
+}
+
+/*
+---------------------Colors from 60s---------------------
+
+*/
+/* burn_sienna #882D17 */
+.bg-burn_sienna
+{
+  background-color: #882D17;
+}
+.text-burn_sienna
+{
+  color: #882D17;
+}
+.border-burn_sienna
+{
+  /*border-color: #882D17;*/
+  border:2px solid #882D17;
+}
+/* harvest_gold #E6A817 */
+.bg-harvest_gold
+{
+  background-color: #E6A817;
+}
+.text-harvest_gold
+{
+  color: #E6A817;
+}
+.border-harvest_gold
+{
+  /*border-color: #882D17;*/
+  border:2px solid #E6A817;
+}
+/* avocado #568203 */
+.bg-avocado
+{
+  background-color: #568203;
+}
+.text-avocado
+{
+  color: #568203;
+}
+.border-avocado
+{
+  /*border-color: #882D17;*/
+  border:2px solid #568203;
+}
+/* teak #A38B5F */
+.bg-teak
+{
+  background-color: #A38B5F;
+}
+.text-teak
+{
+  color: #A38B5F;
+}
+.border-teak
+{
+  /*border-color: #882D17;*/
+  border:2px solid #A38B5F;
+}
+/* cerulean_blue #2a52be */
+.bg-cerulean_blue
+{
+  background-color: #2a52be;
+}
+.text-cerulean_blue
+{
+  color: #2a52be;
+}
+.border-cerulean_blue
+{
+  /*border-color: #882D17;*/
+  border:2px solid #2a52be;
+}
+/* coppertone #b87333 */
+.bg-coppertone
+{
+  background-color: #b87333; 
+} 
+.text-coppertone
+{
+  color: #b87333; 
+}
+.border-coppertone
+{
+  /*border-color: #882D17;*/
+  border:2px solid #b87333;
+} 
+/*
+Easy read- it changes colors to black and white when hover in order to make text easier to read
+*/
+.easy_read:hover
+{
+  color:black;
+  background-color: white;
 }
 /*
 ---------------------Navbar classes---------------------
@@ -80,6 +179,14 @@ transition-duration: 3s, 1s;
 transition-property: transform;
 }
 /* zoomable-150 - make element even bigger*/
+.zoomable-125:hover
+{
+transform: scale(1.25) ;
+z-index: +1;
+transition-duration: 3s, 1s;
+transition-property: transform;
+}
+/* zoomable-150 - make element even bigger*/
 .zoomable-150:hover
 {
 transform: scale(1.5) ;
@@ -95,8 +202,53 @@ z-index: +1;
 transition-duration: 3s, 1s;
 transition-property: transform;
 }
+/* makes smaller the element that is sibling of hovered element and is on most left  */
+.smallable_3d_most_left
+{
+ -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateY(80deg) scale(0.9); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateY(80deg);
+}
+/* makes smaller the element that is sibling of hovered element and is on center left (or all element eg. menu on top) */
+.smallable_3d_left
+{
+ -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateY(45deg) scale(0.9); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateY(45deg);
+}
+/* the same as abowe but for right side */
+.smallable_3d_most_right
+{
+ -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateY(290deg) scale(0.9); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateY(290deg);
+}
+.smallable_3d_right
+{
+ -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateY(335deg) scale(0.9); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateY(335deg);
+}
+/* it makes element just smaller*/
+.smallable
+{
+ -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateY(335deg) scale(0.9); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateY(335deg);
+}
+
+
 
 /* some opacity class*/
+.show_animation
+{
+  opacity : 0 ; 
+}
 .opacity-0
 {
   /*
@@ -135,6 +287,91 @@ transition-property: transform;
   */
   opacity : 100 ;
 }
+.rotated-10
+{
+      -webkit-transform: rotateZ(10deg); /* Safari */
+      transform: rotateZ(10deg); /* Standard syntax */
+}
+.rotated-45
+{
+      -webkit-transform: rotateY(45deg); /* Safari */
+      transform: rotateY(45deg); /* Standard syntax */
+}
+.lay_down
+{
+      -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+    -webkit-transform: rotateX(80deg); /* Safari 3-8  */
+    transform-style: preserve-3d;
+    transform: rotateX(80deg);
+}
+.perspective-100
+{
+
+    -webkit-perspective: 1000px; /* Safari 4-8  */
+    perspective: 1000px;
+}
+.perspective-10
+{
+
+    -webkit-perspective: 100px; /* Safari 4-8  */
+    perspective: 100px;
+}
+
+.rotated-135
+{
+      -webkit-transform: rotateY(135deg); /* Safari */
+      transform: rotateY(135deg); /* Standard syntax */
+}
+.rotated-170
+{
+      -webkit-transform: rotateZ(170deg); /* Safari */
+      transform: rotateZ(170deg); /* Standard syntax */
+}
+.rotated-270
+{
+      -webkit-transform: rotateY(270deg); /* Safari */
+      transform: rotateY(270deg); /* Standard syntax */
+}
+.rotated-350
+{
+      -webkit-transform: rotateZ(350deg); /* Safari */
+      transform: rotateZ(350deg); /* Standard syntax */
+}
+.rotated-90
+{
+      -webkit-transform: rotateY(90deg); /* Safari */
+      transform: rotateY(90deg); /* Standard syntax */
+      -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+      transform-style: preserve-3d;
+    
+}
+/*
+experimental
+*/
+ @keyframes ani_rotated-90
+{
+    0% {
+      -webkit-transform: rotateY(0deg); /* Safari */
+      transform: rotateY(0deg); /* Standard syntax */
+      -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+      transform-style: preserve-3d;
+      /*transform: scale(0);*/
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: rotateY(90deg); /* Safari */
+      transform: rotateY(90deg); /* Standard syntax */
+      -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+      transform-style: preserve-3d;
+      /*transform: scale(1);*/
+    }
+}
+
+.rotated-100
+{
+      -webkit-transform: rotateY(100deg); /* Safari */
+      transform: rotateY(100deg); /* Standard syntax */
+}
 @keyframes  opacity-anime{
     0% {
       opacity: 0;
@@ -166,13 +403,35 @@ It is used in script.js in $(window).scroll(function(){
     from {
       opacity: 0;
       transform: scale(0);
+      -webkit-transform: rotateY(90deg); /* Safari */
+      transform: rotateY(90deg); /* Standard syntax */
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+      
+    }
+}
+
+@keyframes  wake_up{
+/*
+It is animation that set elements on screen during scrolling
+It is used in script.js in $(window).scroll(function(){
+ $(window).scroll( in. /js/script.js
+*/
+    from {
+          -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
+          -webkit-transform: rotateX(80deg) scale(0.5);  /* Safari 3-8  */
+          transform-style: preserve-3d;
+          transform: rotateX(80deg) scale(0.5); 
+          opacity: 0.3;
+
     }
     to {
       opacity: 1;
       transform: scale(1);
     }
 }
-
 @keyframes  backgound-move
 {
     /*
