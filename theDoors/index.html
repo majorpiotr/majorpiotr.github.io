@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> THE DOORS</title>
+<!-- links for scripts and css -->
+<!-- bootstrap: css -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<!-- fontawesome: -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<!-- jquery: -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<!-- bootstrap.js: -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!--  main css styles: -->
+<link rel="stylesheet" href="css/style.css" >
+<!-- main js file: -->
+<script src="js/script.js"></script>
+<!-- end  links for scripts and css -->
+</head>
+
+<body>
+  <div class="container-fluid">
+<!--   NavBar - this on top on page  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+      <a class="navbar-brand zoomable" href="#"><img src="img/The_doors_logo_2.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item ml-1 border zoomable active" data-toggle="collapse" data-target="#navbarNav">
+            <a class="nav-link zoomable"  href="#meet_us">Meet Us<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ml-1 border zoomable" data-toggle="collapse" data-target="#navbarNav">
+            <a class="nav-link zoomable " href="#discover_us">Discover Us</a>
+          </li>
+          <li class="nav-item ml-1 border zoomable" data-toggle="collapse" data-target="#navbarNav">
+            <a class="nav-link zoomable" href="#watch_us">Watch_us</a>
+          </li>
+          <li class="nav-item ml-1 border zoomable" data-toggle="collapse" data-target="#navbarNav">
+            <a class="nav-link zoomable " href="#our_photos">Photos</a>
+          </li>
+          <li class="nav-item ml-1 border zoomable" data-toggle="collapse" data-target="#navbarNav">
+            <a class="nav-link zoomable " href="#our_history">History</a>
+          </li>
+          <li class="nav-item ml-1 border zoomable" data-toggle="collapse" data-target="#navbarNav">
+            <a class="nav-link zoomable " href="#join_us">Join Us</a>
+          </li>
+          <li class="nav-item ml-1 border zoomable" data-toggle="collapse" data-target="#navbarNav">
+            <a class="nav-link zoomable " href="#contact_us">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+<!--  end of : NavBar - this on top on page    -->
+
+<!-- Team Cards - photos of team something similar to jumbotron - on top page  -->
+  <section id="first-page" style="background-image: url('img/jumbotron.jpg');" class="first-page">
+    <div class="text-center zoomable display-3 mb-5 bg-dark text-white" id="meet_us">Meet Us!</div>
+    <div class="container-fluid">
+      <div class="card-group">
+      <!-- Jim Morrison the singer -->
+        <div class="card text-white bg-transparent mb-3 px-0 col-lg-3 col-md-12 col-sm-12 col-xs-12 mr-1 zoomable show_animation opacity-0" id="Morrison" >
+          <img class="card-img-top hero_1" src="img/1.png" onmouseover="this.src='img/hero1.png';" onmouseout="this.src='img/1.png';" alt="Card image cap">
+          <div class="card-body bg-warning px-0">
+            <p class="card-title display-4 text-center">Jim</p>
+            <p class="card-title d-none d-lg-block display-4 text-center ">Morrison</p>
+            <p class="card-text d-none d-lg-block text-justify px-2">Singer for The Doors
+              At the center of The Doors’ mystique is the magnetic presence of singer-poet Jim Morrison, the leather-clad “Lizard King” who brought the riveting power of a shaman to the microphone.
+            </p>
+            <p class="text-right">Read More <i class="fas fa-angle-double-right"></i></p>
+          </div>
+        <div class="card-footer bg-warning ">
+    	<!-- <button type="button" class="btn btn-primary opener"><small class="text-muted ">Read More</small></button> -->
+          <small class="text-muted ">Singer for The Doors</small>  
+        </div>
+      </div>
+      <!-- Ray Mazarek -->
+      <div class="card text-white bg-transparent mb-3 px-0 col-lg-3 col-md-12 col-sm-12 col-xs-12 mr-1 zoomable show_animation opacity-0" id="Manzarek">
+        <img class="card-img-top " src="img/2.png" onmouseover="this.src='img/hero2.png';" onmouseout="this.src='img/2.png';" alt="Card image cap">
+        <div class="card-body bg-info px-0">
+          <p class="card-title display-4 text-center">Ray</p>
+          <p class="card-title d-none d-lg-block  display-4 text-center "> Manzarek</p>
+          <p class="card-text d-none d-lg-block text-justify px-2">Keyboardist for The Doors
+            Ray Manzarek was the architect of The Doors’ intoxicating keyboard sound. Manzarek’s evocative playing fused rock, jazz, blues, bossa nova and an array of other styles into something utterly, dazzlingly new.</p>
+        </div>
+        <div class="card-footer bg-info">
+          <small class="text-muted">Keyboardist for The Doors</small>
+        </div>
+      </div>
+      <!-- John Densmore -->
+      <div class="card text-white bg-transparent mb-3 px-0 col-lg-3 col-md-12 col-sm-12 col-xs-12 mr-1 zoomable show_animation opacity-0" id="Densmore">
+        <img class="card-img-top " src="img/4.png" onmouseover="this.src='img/hero4.png';" onmouseout="this.src='img/4.png';"   alt="Card image cap">
+        <div class="card-body bg-danger px-0">
+          <p class="card-title display-4 text-center">John</p>
+          <p class="card-title d-none d-lg-block  display-4 text-center ">Densmore</p>
+          <p class="card-text d-none d-lg-block text-justify px-2">Drummer for The Doors
+            Drummer John Densmore was far more than merely the rhythmic engine of The Doors. Strongly influenced by jazz skinsmen like Elvin Jones and the supple grooves of the Brazilian wave, he brought a highly evolved sense of dynamics, structure and musicality to his beats.</p>
+        </div>
+        <div class="card-footer bg-danger ">
+          <small class="text-muted">Drummer for The Doors</small>
+        </div>
+      </div>
+      <!-- Robby Krieger -->
+      <div class="card text-white bg-transparent mb-3 px-0 col-lg-3 col-md-12 col-sm-12 col-xs-12 mr-1 zoomable show_animation opacity-0" id="Krieger">
+        <img class="card-img-top" src="img/3.png" onmouseover="this.src='img/hero3.png';" onmouseout="this.src='img/3.png';"  alt="Card image cap">
+        <div class="card-body bg-primary px-0">
+          <p class="card-title display-4 text-center">Robby</p>
+          <p class="card-title d-none d-lg-block  display-4 text-center "> Krieger</p>
+          <p class="card-text d-none d-lg-block text-justify px-2">
+            With a flair for wicked bottleneck slide, exploratory solos and gutbucket grooves, guitarist Robby Krieger brought a stinging, sinuous intensity to the sound of The Doors. But he was also a key songwriter in the band and penned some of their biggest hits – notably their mesmerizing #1 hit, “Light My Fire.”</p>
+        </div>
+      <div class="card-footer  bg-primary">
+        <small class="text-dark">Guitarist for The Doors</small>
+      </div>
+    </div>
+  </div>
+  </section>
+<!-- end of : Team Cards - photos of team something similar to jumbotron - on top page  -->
+
+  <section id="first-page" class="my-0 pb-5" style="background-image: url('img/doors.jpg');" class="bg-warning">
+    <!-- Discover us on youtube   -->
+    <div class="text-center zoomable display-3 mb-4 bg-dark text-white" id="discover_us">Discover us :</div>
+    <div class= "container ">
+      <div class="card text-white bg-info mb-0 zoomable show_animation opacity-0" id="discover_us_id">
+<!-- <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/W9SZyo7m06s?list=PLPH16x8oUZKBQ4vTD2T2vnP1mDmNtbHVO" allowfullscreen></iframe>
+</div> -->
+        <img src="img/movie.png">
+        <div class="card-body mb-3">
+          <h5 class="card-title text-center">The Doors - Light My Fire </h5><h1>Example heading <span class="badge badge-secondary">New</span></h1>
+          <p class="card-text"><small class="text-muted text-center">Last updated 3 mins ago. </small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- End of  Discover us on youtube   -->
+
+<!-- one movie   -->
+  <section id="first-page" class="my-0 pb-5 nr_two" style="background-image: url('img/jubmo.jpg');">
+    <div class="text-center zoomable display-3 mb-4 mt-0 bg-dark text-white" id="watch_us"> A simple !</div>
+    <div class= "container my-0">
+      <div class="card text-white bg-info mb-0 bg-transparent">
+	<!-- <iframe  height="480" src="https://www.youtube.com/embed/RsqqOhi9_8Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+        <div class="card-body">
+          <h5 class="card-title text-center">Card title</h5>
+          <img src="img/movie.png">
+          <p class="card-text text-center">This is a wider card with supporting text below as a natural lead-in to additional content. 
+            This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted text-center">Last updated 3 mins ago</small></p>
+         </div>
+       </div>
+     </div>
+  </section>
+<!-- End of  one movie  -->
+  <section id="first-page" class="my-0 pb-5" style="background-image: url('img/jumbotron.jpg');">
+<!-- photos  -->
+  <!-- </div> -->
+    <div class="text-center zoomable display-3 mb-4 bg-dark text-white" id="our_photos">Photo's</div>
+    <div class="container">
+      <div class="row show_animation" id= "photo_table">
+        <div class="card  bg-transparent px-1 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <img class="card-img-top set_background zoomable" src="photos/photo_0.jpg" alt="Card image cap">
+          <div class="card-body">
+          </div>
+      </div>
+      <div class="card  bg-transparent px-1 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <img class="card-img-top set_background zoomable"  src="photos/photo_1.jpg" alt="Card image cap"></a>
+        <div class="card-body">
+        </div>
+      </div>  
+      <div class="card  bg-transparent px-1 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <img class="card-img-top set_background zoomable" src="photos/photo_2.jpg" alt="Card image cap"></a>
+        <div class="card-body">
+        </div>
+      </div>
+      <div class="card  bg-transparent px-1 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <img class="card-img-top set_background zoomable" src="photos/photo_3.jpg" alt="Card image cap"></a>
+        <div class="card-body">
+        </div>
+      </div>
+      <div class="card  bg-transparent px-1 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <img class="card-img-top set_background zoomable" src="photos/photo_4.jpg" alt="Card image cap"></a>
+        <div class="card-body">
+        </div>
+      </div>
+      <div class="card  bg-transparent px-1 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <img class="card-img-top set_background zoomable" src="photos/photo_5.jpg" alt="Card image cap"></a>
+        <div class="card-body">
+        </div>
+      </div>
+      <div class="card  bg-transparent px-1 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <img class="card-img-top set_background zoomable" src="photos/photo_6.jpg" alt="Card image cap"></a>
+        <div class="card-body">
+        </div>
+      </div>
+      <div class="card  bg-transparent px-1 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <img class="card-img-top set_background zoomable" src="photos/photo_7.jpg" alt="Card image cap"></a>
+        <div class="card-body">
+        </div>
+      </div>
+      <div class="card  bg-transparent px-1 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <img class="card-img-top set_background zoomable" src="photos/photo_8.jpg" alt="Card image cap"></a>
+        <div class="card-body">
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- End of  photos   -->
+  </section>
+  <section id="first-page" style="background-image: url('img/jumbotron.jpg');">
+<!-- history   -->
+    <div class="text-center zoomable display-3 mb-4 bg-dark text-white" id="our_history"> Our History: </div>		
+    <div class="card text-white bg-info mb-3 px-1 py-1">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<!-- XP - buttons -->
+        <div class="text-center">
+          <button type="button mx-1" data-target="#carouselExampleIndicators" data-slide-to="0" class="btn btn-info">19/04/1990</button>
+          <button type="button mx-1" data-target="#carouselExampleIndicators" data-slide-to="1" class="btn btn-info">19/04/1990</button>
+          <button type="button mx-1" data-target="#carouselExampleIndicators" data-slide-to="2" class="btn btn-info">19/04/1990</button>
+          <button type="button mx-1" data-target="#carouselExampleIndicators" data-slide-to="3" class="btn btn-info">19/04/1990</button>
+          <button type="button mx-1" data-target="#carouselExampleIndicators" data-slide-to="4"  class="btn btn-primary active">19/04/1990</button>
+          <button type="button mx-1" data-target="#carouselExampleIndicators" data-slide-to="5" class="btn btn-info">19/04/1990</button>
+          <button type="button mx-1" data-target="#carouselExampleIndicators" data-slide-to="6" class="btn btn-info">19/04/1990</button>
+          <button type="button mx-1" data-target="#carouselExampleIndicators" data-slide-to="7" class="btn btn-info">19/04/1990</button>
+        </div>
+<!-- end button -->
+        <div class="carousel-inner is_moving">
+          <div class="carousel-item active zoomable">
+            <img class="d-block w-100" src="img/jumbotron.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item zoomable">
+            <img class="d-block w-100 short-300" src="img/minis/mini2.png" alt="Second slide">
+          </div>
+          <div class="carousel-item zoomable">
+            <img class="d-block w-100" src="img/minis/mini1.png" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">1982</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">2010</span>
+        </a>
+      </div>
+      <div class="card-body zoomable">
+        <h5 class="card-title text-center">Card title</h5>
+        <p class="card-text text-center">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+
+  </section>
+  <!-- end of history -->
+  <section id="first-page" style="background-image: url('img/jumbotron.jpg');">
+<!-- Next event -->
+    <div class="text-center zoomable display-3 mb-4 bg-dark text-white zoomable" id="join_us">Next Event : </div>		
+    <!-- widget alternative -->
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6 apear-left">
+          <div class="card bg-warning my-2">
+            <div class="card-body text-center">
+              <div class="table-responsive">
+                <h5 class="card-title zoomable">April 2019</h5>
+                <table class="table table-hover">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col" class="border ">Mon</th>
+                      <th scope="col" class="border ">Tue</th>
+                      <th scope="col" class="border ">Wed</th>
+                      <th scope="col" class="border ">Thu</th>
+                      <th scope="col" class="border ">Fri</th>
+                      <th scope="col" class="border ">Sat</th>
+                      <th scope="col" class="border ">Sun</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="col" class="border bg-light">1</th>
+                      <th scope="col" class="border bg-light">2</th>
+                      <th scope="col" class="border bg-light">3</th>
+                      <th scope="col" class="border bg-light">4</th>
+                      <th scope="col" class="border bg-light">5</th>
+                      <th scope="col" class="border bg-light">6</th>
+                      <th scope="col" class="border bg-light">7</th>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="border zoomable bg-success">8 <span class="badge badge-light"><small>400</small></span></th>
+                        <th scope="col" class="border bg-light">9</th>
+                        <th scope="col" class="border bg-light">10</th>
+                        <th scope="col" class="border bg-light">11</th>
+                        <th scope="col" class="border bg-light">12</th>
+                        <th scope="col" class="border bg-light">13</th>
+                        <th scope="col" class="border bg-light">14</th>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="border bg-light">15</th>
+                        <th scope="col" class="border bg-light">16</th>
+                        <th scope="col" class="border bg-light">17</th>
+                        <th scope="col" class="border bg-light">18</th>
+                        <th scope="col" class="border bg-success">19 <span class="badge badge-light"><small>48</small></span></th>
+                        <th scope="col"class="border bg-light">20</th>
+                        <th scope="col"class="border bg-light">21</th>
+                    </tr>
+                    <tr>
+                        <th scope="col"class="border bg-light">22</th>
+                        <th scope="col"class="border bg-light">23</th>
+                        <th scope="col"class="border bg-light">24</th>
+                        <th scope="col"class="border bg-light">25</th>
+                        <th scope="col"class="border bg-warning">26 <span class="badge badge-light"><small>4</small></span></th>
+                        <th scope="col"class="border bg-danger ">27</th>
+                        <th scope="col"class="border bg-light">28</th>
+                    </tr>
+                    <tr>
+                        <th scope="col"class="border bg-light">29</th>
+                        <th scope="col"class="border bg-light">30</th>
+                        <th scope="col"class="border bg-light">31</th>
+                        <th scope="col"class="border bg-light">1</th>
+                        <th scope="col"class="border bg-light">2</th>
+                        <th scope="col"class="border bg-light">3</th>
+                        <th scope="col"class="border bg-light">4</th>
+                    </tr>
+                  </tbody>
+                </table>
+                <div>
+                  <p>Legend:</p>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+   
+                    <!-- <button type="button" class="btn btn-primary btn-sm">Primary</button> -->
+                    <!-- <button type="button" class="btn btn-secondary btn-sm">Secondary</button> -->
+                    <button type="button" class="btn btn-success btn-sm mx-1 border">Buy now! Tickets available :)</button>
+                    <button type="button" class="btn btn-danger btn-sm mx-1 border">No more Tickets :(</button>
+                    <button type="button" class="btn btn-warning btn-sm mx-1 border">Only few Ticket :|</button>
+                    <!-- <button type="button" class="btn btn-info btn-sm">Info</button> -->
+                    <button type="button" class="btn btn-light btn-sm mx-1 border">No event this day</button>
+                    <!-- <button type="button" class="btn btn-dark btn-sm">Dark</button> -->
+                    <!-- <button type="button" class="btn btn-link btn-sm">Link</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="card bg-info my-2">
+            <div class="card-body text-center">
+              <h5 class="card-title"> 19 / 04 / 2019  Mercedes - Benz Arena ( Stuttgart - Germany )</h5>
+              <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+              <p><img  class= "zoomable img-fluid"src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Neckarstadion_2011.jpg/800px-Neckarstadion_2011.jpg"></p>
+              <p> <a href="#" class="btn btn-primary">Book now</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- widget alternative -->
+<!-- end of Next event -->
+  </section>
+  <section id="first-page" style="background-image: url('img/jumbotron.jpg');" id="first-page" style="background-image: url('img/jumbotron.jpg');">
+<!--   Footer and social media links...    -->
+    <footer>
+      <div class="text-center zoomable display-3 mb-4 bg-dark text-white" id="contact_us">Our Social Media:</div>
+        <div class="card-deck ">
+      <div class="card text-white bg-primary mb-3 zoomable">
+        <div class="card-body text-center">
+          <h5 class="card-title">
+            <a href="https://www.youtube.com/channel/UCYgJ2M1mq8Ae0QOm_VQU4VQ" target="_blank" >
+              <h1 class="text-white">YouTube </h1>
+              <!-- <img class="card-img-top img_link mx-auto d-block" src="img/logo_youtube.png"> -->
+              <i class="fab fa-youtube-square fa-4x text-white"></i>
+            </a>
+          </h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <div class="card text-white bg-success mb-3 zoomable">
+  	   <div class="card-body">
+        <h5 class="card-title text-center">
+          <a href="https://twitter.com/TheDoors" target="_blank"><h1 class="text-center text-white">Twitter</h1>
+           <i class="fab fa-twitter-square fa-4x text-white"></i>
+          </a>
+        </h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <div class="card text-white bg-warning mb-3 zoomable">
+        <div class="card-body text-center">
+          <h5 class="card-title">
+      	    <a href="https://en.wikipedia.org/wiki/The_Doors#History" target="_blank"><h1 class="text-center text-white">Wikipedia</h1> 
+              <i class="fab fa-wikipedia-w fa-4x text-white"></i>
+            </a>
+          </h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </footer>
+ <!--   End of : Footer and social media links...    -->
+  </section>
+  <section style="background-image: url('img/jumbotron.jpg');" class="first-page">
+    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+      <div class="card-header">Header</div>
+      <div class="card-body">
+        <h5 class="card-title">Primary card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
