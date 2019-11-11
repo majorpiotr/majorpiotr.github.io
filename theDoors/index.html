@@ -3,6 +3,7 @@
 <meta content="utf-8" http-equiv="encoding">
 <html>
 <head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<title> THE DOORS</title>
 <!-- links for scripts and css -->
 <!-- bootstrap: css -->
@@ -14,7 +15,7 @@
   <link 
     rel="stylesheet" 
     href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
-    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" 
+    
     crossorigin="anonymous">
 <!-- jquery: -->
   <script 
@@ -43,9 +44,11 @@
       <a class="navbar-brand zoomable" href="#">
         <img src="img/The_doors_logo_2.png">
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+      <button class="navbar-toggler opacity-100" type="button" data-toggle="collapse" data-target="#navbarNav" 
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon opacity-100">
+          <i class="fas fa-bars"></i>
+        </span>
       </button>
       <div class="collapse navbar-collapse text-center" id="navbarNav">
         <ul class="navbar-nav perspective-100">
@@ -224,11 +227,11 @@
               <div class="zoomable-125 border-harvest_gold px-3 py-3 bg-coppertone">
                 <div class="text-center">
                   <div class="d-flex justify-content-between">
-                    <button type="button" class="btn zoomable border-harvest_gold bg-burn_sienna text-harvest_gold text-center easy_read mt-3 mb-5 py-lg-2 py-md-5 px-3 rotated-10" id="previous_video" ref="0_video">
+                    <button type="button" class="btn zoomable border-harvest_gold bg-burn_sienna text-harvest_gold text-center easy_read mt-3 mb-5 py-lg-2 py-md-5 px-3 rotated-10 d-none d-lg-block" id="previous_video" ref="0_video">
                       Back
                     </button>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/mVP8NVSGsnk" class="zoomable-125" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="movie_screen"></iframe>
-                    <button type="button" class="btn zoomable border-harvest_gold bg-burn_sienna text-harvest_gold text-center easy_read mt-3 mb-5 py-lg-2 py-md-5 px-3 rotated-10" id="next_video" ref="0_video">
+                    <button type="button" class="btn zoomable border-harvest_gold bg-burn_sienna text-harvest_gold text-center easy_read mt-3 mb-5 py-lg-2 py-md-5 px-3 rotated-10 d-none d-lg-block" id="next_video" ref="0_video">
                       Next
                     </button>
                   </div>
