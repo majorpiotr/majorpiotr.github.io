@@ -134,7 +134,7 @@ Easy read- it changes colors to black and white when hover in order to make text
 	/*
   It runs animaton slidein for Navbar.
   */
-  opacity:0.3;
+  opacity:0.8;
 	animation-duration: 2s;
   animation-name: slidein;
 } 
