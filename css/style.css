@@ -1,9 +1,14 @@
 /*
 -------------------- CSS for basic HTML elements-------- 
 */
+
 body{
-	padding-top: 100px;
-  overflow-x: hidden;
+	/*padding-top: 100px;*/
+    overflow-x: hidden;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../img/jumbotron.jpg');
 }
 a:hover
 {
@@ -13,95 +18,103 @@ html
 {
   scroll-behavior: smooth;
 }
+.my_accordion{
+/*bg-blue_sapphire  border-platinum text-gunmetal_gray*/
+  background-color: #2C3531;
+  border:2px solid #D9B08C;
+  color: #116466;
+}
 
 /*
----------------------Colors from 60s---------------------
+---------------------Modal---------------------
+*/
+.modal-dialog {
+  min-width: 100%;
+    margin: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+}
+
+/*
+---------------------Colors from 2010s---------------------
 
 */
-/* burn_sienna #882D17 */
-.bg-burn_sienna
+/* blue_sapphire #2C3531 */
+.bg-blue_sapphire
 {
-  background-color: #882D17;
+  background-color: #2C3531;
 }
-.text-burn_sienna
+.text-blue_sapphire
 {
-  color: #882D17;
+  color: #2C3531;
 }
-.border-burn_sienna
+.border-blue_sapphire
+{
+  border:2px solid #2C3531;
+}
+/* gunmetal_gray #116466 */
+.bg-gunmetal_gray
+{
+  background-color: #116466;
+}
+.text-gunmetal_gray
+{
+  color: #116466;
+}
+.border-gunmetal_gray
+{
+  border:2px solid #116466;
+}
+/* platinum #D9B08C */
+.bg-platinum
+{
+  background-color: #D9B08C;
+}
+.text-platinum
+{
+  color: #D9B08C;
+}
+.border-platinum
 {
   /*border-color: #882D17;*/
-  border:2px solid #882D17;
+  border:2px solid #D9B08C;
 }
-/* harvest_gold #E6A817 */
-.bg-harvest_gold
+/* peach-orange #FFCB9A */
+.bg-peach-orange
 {
-  background-color: #E6A817;
+  background-color: #FFCB9A;
 }
-.text-harvest_gold
+.text-peach-orange
 {
-  color: #E6A817;
+  color: #FFCB9A;
 }
-.border-harvest_gold
+.border-peach-orange
 {
   /*border-color: #882D17;*/
-  border:2px solid #E6A817;
+  border:2px solid #FFCB9A;
 }
-/* avocado #568203 */
-.bg-avocado
+/* tan #D1E8E2 */
+.bg-tan
 {
-  background-color: #568203;
+  background-color: #D1E8E2;
 }
-.text-avocado
+.text-tan
 {
-  color: #568203;
+  color: #D1E8E2;
 }
-.border-avocado
+.border-tan
 {
   /*border-color: #882D17;*/
-  border:2px solid #568203;
+  border:2px solid #D1E8E2;
 }
-/* teak #A38B5F */
-.bg-teak
-{
-  background-color: #A38B5F;
-}
-.text-teak
-{
-  color: #A38B5F;
-}
-.border-teak
-{
-  /*border-color: #882D17;*/
-  border:2px solid #A38B5F;
-}
-/* cerulean_blue #2a52be */
-.bg-cerulean_blue
-{
-  background-color: #2a52be;
-}
-.text-cerulean_blue
-{
-  color: #2a52be;
-}
-.border-cerulean_blue
-{
-  /*border-color: #882D17;*/
-  border:2px solid #2a52be;
-}
-/* coppertone #b87333 */
-.bg-coppertone
-{
-  background-color: #b87333; 
-} 
-.text-coppertone
-{
-  color: #b87333; 
-}
-.border-coppertone
-{
-  /*border-color: #882D17;*/
-  border:2px solid #b87333;
-} 
+ 
 /*
 Easy read- it changes colors to black and white when hover in order to make text easier to read
 */
@@ -130,27 +143,32 @@ Easy read- it changes colors to black and white when hover in order to make text
   opacity: 1;
   }
 }
-.navbar{
+
+.searchbar{
 	/*
   It runs animaton slidein for Navbar.
   */
-  opacity:0.8;
+  opacity:0.3;
 	animation-duration: 2s;
   animation-name: slidein;
 } 
-.navbar:hover{
+@media(min-width: 1000px)
+{
+.searchbar{
+  /*
+  It runs animaton slidein for Navbar.
+  */
+  opacity:0.7;
+  animation-duration: 2s;
+  animation-name: slidein;
+} 
+}
+.searchbar:hover{
   /*
   It shows Navbar after hover
   */
 	opacity:1;
 } 
-.nav-link {
-  opacity:1;
-}
-.nav-item
-{
-  opacity:1;
-}
 /*----------------- end of navbar classes-----------------*/
 .card{
   /*
@@ -171,38 +189,65 @@ Easy read- it changes colors to black and white when hover in order to make text
 
 
 /* class zoomable - it allows us to zoom element. It applies to every "zoomable" element on page, so we avoid class repetation */
-.zoomable:hover
+/* i figured out that sometimes zoomable does not looks good on small screens. Moreover,
+ witht all likelihood they do not have mouse so hover does not work.*/
+@media(min-width: 1000px)
 {
-transform: scale(1.1) ;
-z-index: +1;
-transition-duration: 3s, 1s;
-transition-property: transform;
-}
+  .zoomable
+  {
+    transform: scale(1) ;
+    z-index: +1;
+    transition-duration: 3s, 1s;
+    transition-property: transform;
+  }
+  .zoomable:hover
+  {
+    transform: scale(1.1) ;
+    z-index: +1;
+    transition-duration: 3s, 1s;
+    transition-property: transform;
+  }
+
 /* zoomable-150 - make element even bigger*/
-.zoomable-125:hover
-{
-transform: scale(1.25) ;
-z-index: +1;
-transition-duration: 3s, 1s;
-transition-property: transform;
-}
+
+  .zoomable-125:hover
+  {
+    transform: scale(1.25) ;
+    z-index: +1;
+    transition-duration: 3s, 1s;  
+    transition-property: transform;
+  }
+  .zoomable-125
+  {
+    transform: scale(1) ;
+    z-index: +1;
+    transition-duration: 3s, 1s;
+    transition-property: transform;
+  }
 /* zoomable-150 - make element even bigger*/
-.zoomable-150:hover
-{
-transform: scale(1.5) ;
-z-index: +1;
-transition-duration: 3s, 1s;
-transition-property: transform;
-}
+  .zoomable-150:hover
+  {
+    transform: scale(1.5) ;
+    z-index: +1;
+    transition-duration: 3s, 1s;
+    transition-property: transform;
+  }
 /* zoomable-200 makes element 2 times bigger*/
-.zoomable-200:hover
-{
-transform: scale(2) ;
-z-index: +1;
-transition-duration: 3s, 1s;
-transition-property: transform;
+  .zoomable-200:hover
+  {
+    transform: scale(2) ;
+    z-index: +1;
+    transition-duration: 3s, 1s;
+    transition-property: transform;
+  }
+  .small_0_9
+  {
+    transform: scale(0.9) ;
+    z-index: +1;
+    transition-duration: 3s, 1s;
+    transition-property: transform;
+  }
 }
-/* makes smaller the element that is sibling of hovered element and is on most left  */
 .smallable_3d_most_left
 {
  -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
@@ -210,7 +255,6 @@ transition-property: transform;
     transform-style: preserve-3d;
     transform: rotateY(80deg);
 }
-/* makes smaller the element that is sibling of hovered element and is on center left (or all element eg. menu on top) */
 .smallable_3d_left
 {
  -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
@@ -218,7 +262,6 @@ transition-property: transform;
     transform-style: preserve-3d;
     transform: rotateY(45deg);
 }
-/* the same as abowe but for right side */
 .smallable_3d_most_right
 {
  -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
@@ -233,7 +276,6 @@ transition-property: transform;
     transform-style: preserve-3d;
     transform: rotateY(335deg);
 }
-/* it makes element just smaller*/
 .smallable
 {
  -webkit-transform-style: preserve-3d; /* Safari 3-8  */    
@@ -242,6 +284,9 @@ transition-property: transform;
     transform: rotateY(335deg);
 }
 
+
+/* some pushing stuff
+*/
 
 
 /* some opacity class*/
@@ -402,7 +447,7 @@ It is used in script.js in $(window).scroll(function(){
 */
     from {
       opacity: 0;
-      transform: scale(0);
+      transform: scale(0.1);
       -webkit-transform: rotateY(90deg); /* Safari */
       transform: rotateY(90deg); /* Standard syntax */
     }
@@ -462,7 +507,7 @@ section
     It runs animation backgound-move so background moves from LEFT to RIGHT and BACK 
     */
     animation-name: backgound-move;
-    animation-duration: 60s;
+    animation-duration: 120s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
